@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Moja Aplikacja{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Moja Aplikacja Finansowa</h1>
+    </header>
+
+    <nav>
+        <div>
+            <a href="{% url 'transaction_list' %}">Lista Transakcji</a>
+            <a href="{% url 'add_transaction' %}">Dodaj Transakcję</a>
+        </div>
+        <div>
+            {% if user.is_authenticated %}
+                <span>Witaj, {{ user.username }}!</span>
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">Wyloguj się</button>
+                </form>
+            {% else %}
+                <a href="{% url 'login' %}">Zaloguj się</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}
+        <!-- Treść właściwa stron będzie wstawiana tutaj -->
+        {% endblock %}
+    </main>
+
+</body>
+</html>
