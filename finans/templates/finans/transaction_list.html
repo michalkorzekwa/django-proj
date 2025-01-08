@@ -2,10 +2,9 @@
 {% block content %}
 <h2>Twoje transakcje</h2>
 <p>Saldo: {{ balance }} PLN | Przychody: {{ total_income }} PLN | Wydatki: {{ total_expense }} PLN</p>
-<a href="{% url 'add_transaction' %}">Dodaj transakcję</a>
 <table>
     <tr>
-        <th>Tytuł</th>
+        <th>Tytul</th>
         <th>Kategoria</th>
         <th>Kwota</th>
         <th>Typ</th>

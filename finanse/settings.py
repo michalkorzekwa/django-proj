@@ -18,7 +18,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 LOGOUT_REDIRECT_URL = '/'  # Przekierowanie na stronę główną po wylogowaniu
-LOGIN_REDIRECT_URL = '/transaction_list'
+LOGIN_REDIRECT_URL = '/transaction_list/'
 LOGIN_URL = '/accounts/login/'
 
 
