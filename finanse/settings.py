@@ -17,7 +17,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-LOGOUT_REDIRECT_URL = '/'  # Przekierowanie na stronę główną po wylogowaniu
+LOGOUT_REDIRECT_URL = '/' 
 LOGIN_REDIRECT_URL = '/transaction_list/'
 LOGIN_URL = '/accounts/login/'
 
